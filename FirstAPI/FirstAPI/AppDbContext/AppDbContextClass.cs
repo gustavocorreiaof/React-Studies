@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FirstAPI.AppDbContext;
 
-public class AppDbContext : DbContext
+public class AppDbContextClass : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options){}
+    public AppDbContextClass(DbContextOptions<AppDbContextClass> options) : base(options){}
     DbSet<Category> Categories { get; set; }
     DbSet<Product> Products { get; set; }
 

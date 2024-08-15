@@ -4,18 +4,27 @@ import First from './Components/Basics/FirstComponent'
 import ComParametro from './Components/Basics/ComParametro'
 import Fragmento from './Components/Basics/Fragmento'
 import Aleatorio from "./Components/Basics/Aleatorio";
+import Card from "./Components/Basics/Layout/Card";
 
 export default props => {
     return (
 
         <div id="app">
+            <Card titulo="Exercicio Numero Aleatorio">
+                <Aleatorio x={0} y={100}></Aleatorio>
+            </Card>
 
-            <Aleatorio x={0} y={100}></Aleatorio>
+            <Card titulo="Primeiro Componente">
+                <First></First>
+            </Card>
 
-            <Fragmento></Fragmento>
+            <Card titulo="Fragmento">
+                <Fragmento></Fragmento>
+            </Card>
 
-            <First></First>
-            <ComParametro titulo="Componenteaa com Parametro" subtitulo="Primeiro Componente com parametro"></ComParametro>
+            <Card titulo="Com parametro">
+                <ComParametro titulo="Componenteaa com Parametro" subtitulo="Primeiro Componente com parametro"></ComParametro>
+            </Card>
 
         </div>
 

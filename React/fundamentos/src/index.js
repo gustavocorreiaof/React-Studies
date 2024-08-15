@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import First from './Components/Basics/FirstComponent'
+import App from './App'
 
 ReactDOM.render(
     <div>
-        <First></First>
+        <App></App>
     </div>,
     document.getElementById('root')
 )

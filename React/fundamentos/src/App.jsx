@@ -7,33 +7,46 @@ import Fragmento from './Components/Basics/Fragmento'
 import Aleatorio from "./Components/Basics/Aleatorio";
 import Card from "./Components/Basics/Layout/Card";
 import Familia from "./Components/Basics/Familia";
+import FamiliaMembro from "./Components/Basics/FamiliaMembro";
+import ListaAlunos from "./Components/Repeticao/ListaAlunos";
 
 export default props => {
     return (
 
         <div id="app">
-            
+
             <div className="Cards">
 
-            <Card titulo="Componente com filho">
-                <Familia></Familia>
-            </Card>
+                <Card titulo="Lista de Alunos">
+        <ListaAlunos></ListaAlunos>
 
-            <Card titulo="Exercicio Numero Aleatorio" color="red">
-                <Aleatorio x={0} y={100}></Aleatorio>
-            </Card>
+                </Card>
 
-            <Card titulo="Primeiro Componente" color="green">
-                <First></First>
-            </Card>
+                <Card titulo="Componente com filho">
+                    <Familia sobrenome="Miras">
 
-            <Card titulo="Fragmento" color="blue">
-                <Fragmento></Fragmento>
-            </Card>
+                        <FamiliaMembro nome="Pedro"></FamiliaMembro>
+                        <FamiliaMembro nome="Gustavo"></FamiliaMembro>
+                        <FamiliaMembro nome="Feijinhos"></FamiliaMembro>
 
-            <Card titulo="Com parametro">
-                <ComParametro titulo="Componenteaa com Parametro" subtitulo="Primeiro Componente com parametro"></ComParametro>
-            </Card>
+                    </Familia>
+                </Card>
+
+                <Card titulo="Exercicio Numero Aleatorio" color="red">
+                    <Aleatorio x={0} y={100}></Aleatorio>
+                </Card>
+
+                <Card titulo="Primeiro Componente" color="green">
+                    <First></First>
+                </Card>
+
+                <Card titulo="Fragmento" color="blue">
+                    <Fragmento></Fragmento>
+                </Card>
+
+                <Card titulo="Com parametro">
+                    <ComParametro titulo="Componenteaa com Parametro" subtitulo="Primeiro Componente com parametro"></ComParametro>
+                </Card>
 
             </div>
 

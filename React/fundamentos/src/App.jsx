@@ -17,8 +17,8 @@ export default props => {
 
             <div className="Cards">
 
-                <Card titulo="Lista de Alunos">
-        <ListaAlunos></ListaAlunos>
+                <Card titulo="Repetição">
+                    <ListaAlunos></ListaAlunos>
 
                 </Card>
 

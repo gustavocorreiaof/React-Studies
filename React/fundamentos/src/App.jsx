@@ -9,6 +9,7 @@ import Card from "./Components/Basics/Layout/Card";
 import Familia from "./Components/Basics/Familia";
 import FamiliaMembro from "./Components/Basics/FamiliaMembro";
 import ListaAlunos from "./Components/Repeticao/ListaAlunos";
+import TabelaProdutos from "./Components/Repeticao/TabelaProdutos";
 
 export default props => {
     return (
@@ -16,6 +17,11 @@ export default props => {
         <div id="app">
 
             <div className="Cards">
+
+            <Card titulo="Desafio Repetição">
+                 <TabelaProdutos></TabelaProdutos>   
+
+                </Card>
 
                 <Card titulo="Repetição">
                     <ListaAlunos></ListaAlunos>

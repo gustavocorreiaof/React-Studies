@@ -2,8 +2,6 @@ import React from "react";
 
 export default (props) => {
 
-    console.log(props)
-
     const randomNumber = Math.floor(Math.random() * (props.y - props.x + 1)) + props.x;
 
     return(

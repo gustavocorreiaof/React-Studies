@@ -40,3 +40,7 @@ Structs são tipos de valor e por conta disso são armazenadas na Stack;
 Structs são armazenadas na Stack e possuem tempo de acesso mais rápido.*/
 #endregion
 
+FormularioDTO dto = new FormularioDTO("Daniel", "Programador", 100)
+{
+    Cpf= "05645885321"
+};

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace UsuarioLib
 {
-    public record FormularioDTO(string Nome, string Cpf, int Idade)
+    public record struct FormularioDTO(string Nome, string Cpf, int Idade, string Cargo)
     {
-        public string Cargo { get; set; }
     }
 }

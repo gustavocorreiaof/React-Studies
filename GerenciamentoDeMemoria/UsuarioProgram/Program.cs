@@ -40,7 +40,27 @@ Structs são tipos de valor e por conta disso são armazenadas na Stack;
 Structs são armazenadas na Stack e possuem tempo de acesso mais rápido.*/
 #endregion
 
-FormularioDTO dto = new FormularioDTO("Daniel", "Programador", 100)
+Stopwatch stopwatch = new Stopwatch();
+stopwatch.Start();
+for (int i = 0; i < 1000000000; i++)
 {
-    Cpf= "05645885321"
-};
+    Coordenada coordenada = new Coordenada(123.132, -123.456);
+    var latitude = coordenada.Latitude;
+    var longitude = coordenada.Longitude;
+}
+
+stopwatch.Stop();
+
+Console.WriteLine($"Tempo de struct: {stopwatch.Elapsed.TotalMilliseconds}");
+
+stopwatch.Restart();
+
+for (int i = 0; i < 1000000000; i++)
+{
+    FormularioDTO dto = new FormularioDTO("Daniel", "0564754824", 100, "Programador");
+    var idade = dto.Idade;
+    var nome = dto.Nome;
+}
+
+
+Console.WriteLine($"Tempo de record struct: {stopwatch.Elapsed.TotalMilliseconds}");

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsuarioLib", "UsuarioLib\UsuarioLib.csproj", "{82418274-F209-4DF2-B543-121C5393F3CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsuarioLib", "UsuarioLib\UsuarioLib.csproj", "{82418274-F209-4DF2-B543-121C5393F3CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsuarioProgram", "UsuarioProgram\UsuarioProgram.csproj", "{10D9C192-084B-43C8-BC85-E46903E54B9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsuarioProgram", "UsuarioProgram\UsuarioProgram.csproj", "{10D9C192-084B-43C8-BC85-E46903E54B9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gerenciamento de memória", "Gerenciamento de memória", "{E77A4828-22E1-4B34-B53C-70A9DFD8B08A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82418274-F209-4DF2-B543-121C5393F3CF} = {E77A4828-22E1-4B34-B53C-70A9DFD8B08A}
+		{10D9C192-084B-43C8-BC85-E46903E54B9D} = {E77A4828-22E1-4B34-B53C-70A9DFD8B08A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3182CE03-CF43-4B7F-9DA2-ECF6CA068016}

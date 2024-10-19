@@ -78,8 +78,35 @@ static void GravarGrupoBoletos()
     var leitorDeBoleto = new LeitorDeBoleto();
     List<Boleto> boletos = leitorDeBoleto.LerBoletos("Boletos.csv");
 
-    RelatorioDeBoleto gravadorDeCSV = new RelatorioDeBoleto("BoletosPorCedente.csv");
-    gravadorDeCSV.Processar(boletos);
+    //RelatorioDeBoleto gravadorDeCSV = new RelatorioDeBoleto("BoletosPorCedente.csv");
+    //gravadorDeCSV.Processar(boletos);
 
+    var nomeParametroContrutor = "nomeArquivoSaida";
+    var parametroConstrutor = "BoletosPorCedente.csv";
+    var nomeMetodo = "Processar";
+    var parametroMetodo = boletos;
+
+    ProcessarDinamicamente(nomeParametroContrutor, parametroConstrutor, nomeMetodo, parametroMetodo);
+}
+
+static void ProcessarDinamicamente(string nomeParametroContrutor, string parametroConstrutor, string nomeMetodo, List<Boleto> parametroMetodo)
+{
+    var tipoClasseRelatorio = typeof(RelatorioDeBoleto);
+    var construtores = tipoClasseRelatorio.GetConstructors();
+
+    foreach(var construtor in construtores)
+    {
+        Console.WriteLine($"Constructor: {construtor.Name}");
+        Console.WriteLine($"N de parametros: {construtor.GetParameters().Length}");
+    }
+
+    var usedconstrutor = construtores.Single(c => c.GetParameters().Length == 1 && c.GetParameters()[0].Name == nomeParametroContrutor);
+
+    var instanciaClasse = usedconstrutor.Invoke(new object[]{nomeParametroContrutor});
+
+
+    var method = tipoClasseRelatorio.GetMethod(nomeMetodo);
+
+    method.Invoke(instanciaClasse, new object[] { parametroMetodo });
 
 }

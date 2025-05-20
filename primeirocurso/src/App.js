@@ -1,10 +1,11 @@
 import Banner from './components/Banner/Banner';
+import TextField from './components/TextField';
 
 function App() {
   return (
-    <div className="App">
+    <div c lassName="App">
       <Banner></Banner>
-      
+      <TextField Nome='Nome' PlaceHolder='Digite seu Nome'/>
     </div>
   );
 }

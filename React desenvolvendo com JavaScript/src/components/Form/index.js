@@ -1,6 +1,7 @@
 import './Form.css'
 import TextField from '../TextField'
 import OverHeadList from '../OverHeadList/Index'
+import Button from '../Button/Index'
 
 const Form = () => {
 
@@ -25,7 +26,7 @@ const Form = () => {
                 <TextField Label='Cargo' PlaceHolder='Digite seu cargo' />
                 <TextField Label='Imagem' PlaceHolder='Digite o endereço da imagem' />
                 <OverHeadList Label='Time' itens={times} ></OverHeadList>
-
+                <Button>Criar Card</Button>
             </form>
         </section>
     )

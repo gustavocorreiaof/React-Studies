@@ -22,9 +22,9 @@ const Form = () => {
 
 
 
-                <TextField Label='Nome' PlaceHolder='Digite seu Nome' />
-                <TextField Label='Cargo' PlaceHolder='Digite seu cargo' />
-                <TextField Label='Imagem' PlaceHolder='Digite o endereço da imagem' />
+                <TextField required={true} Label='Nome' PlaceHolder='Digite seu Nome' />
+                <TextField required={true} Label='Cargo' PlaceHolder='Digite seu cargo' />
+                <TextField required={false} Label='Imagem' PlaceHolder='Digite o endereço da imagem' />
                 <OverHeadList Label='Time' itens={times} ></OverHeadList>
                 <Button>Criar Card</Button>
             </form>

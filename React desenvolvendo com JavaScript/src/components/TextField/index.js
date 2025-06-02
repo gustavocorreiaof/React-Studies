@@ -1,10 +1,15 @@
 import './TextField.css'
 
 const TextField = (props) => {
+    
+    const valorDigitado = (event) => {
+        console.log(event.target.value)
+    }
+    
     return(
         <div className='textfield'>
             <label>{props.Label}</label>
-            <input placeholder={props.PlaceHolder}/>
+            <input onChange={valorDigitado} required={props.required} placeholder={props.PlaceHolder}/>
         </div>
     )
 }

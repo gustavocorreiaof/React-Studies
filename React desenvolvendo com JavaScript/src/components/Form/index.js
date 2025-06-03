@@ -2,6 +2,7 @@ import './Form.css'
 import TextField from '../TextField'
 import OverHeadList from '../OverHeadList/Index'
 import Button from '../Button/Index'
+import { useState } from 'react'
 
 const Form = () => {
 
@@ -15,16 +16,25 @@ const Form = () => {
         'Inovação e Gestão'
     ]
 
+    const aoSalvar = (event) => {
+        event.preventDefault()
+        console.log('Form foi submetido => ', nome, cargo, imagem)
+    }
+
+    const [nome, setNome] = useState('')
+    const [cargo, setCargo] = useState('')
+    const [imagem, setImagem] = useState('')
+
     return (
         <section className='formulario'>
-            <form >
+            <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaboraror.</h2>
 
 
 
-                <TextField required={true} Label='Nome' PlaceHolder='Digite seu Nome' />
-                <TextField required={true} Label='Cargo' PlaceHolder='Digite seu cargo' />
-                <TextField required={false} Label='Imagem' PlaceHolder='Digite o endereço da imagem' />
+                <TextField aoAlterado={ valor => setNome(valor)} required={true} Label='Nome' valor={nome} PlaceHolder='Digite seu Nome' />
+                <TextField aoAlterado={ valor => setCargo(valor)} required={true} Label='Cargo' valor={cargo} PlaceHolder='Digite seu cargo' />
+                <TextField aoAlterado={ valor => setImagem(valor)} required={false} Label='Imagem' valor={imagem} PlaceHolder='Digite o endereço da imagem' />
                 <OverHeadList Label='Time' itens={times} ></OverHeadList>
                 <Button>Criar Card</Button>
             </form>

@@ -55,7 +55,7 @@ const times = [
   return (
     <div className="App">
       <Banner></Banner>
-      <Form aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}></Form>   
+      <Form times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}></Form>   
       
       {times.map(time => <Time key={time.nome} Name={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}></Time>)}      
     </div>

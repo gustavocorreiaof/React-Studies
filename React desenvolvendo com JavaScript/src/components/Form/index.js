@@ -6,16 +6,6 @@ import { useState } from 'react'
 
 const Form = (props) => {
 
-    const times = [
-        'Programação',
-        'Front-end',
-        'Data Science',
-        'Devops',
-        'Ux e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const aoSalvar = (event) => {
         event.preventDefault()
         props.aoColaboradorCadastrado({
@@ -41,7 +31,7 @@ const Form = (props) => {
                 <TextField aoAlterado={ valor => setNome(valor)} required={true} Label='Nome' valor={nome} PlaceHolder='Digite seu Nome' />
                 <TextField aoAlterado={ valor => setCargo(valor)} required={true} Label='Cargo' valor={cargo} PlaceHolder='Digite seu cargo' />
                 <TextField aoAlterado={ valor => setImagem(valor)} required={false} Label='Imagem' valor={imagem} PlaceHolder='Digite o endereço da imagem' />
-                <OverHeadList Label='Time' itens={times} required={true} valor={time} aoAlterado={valor => setTime(valor)} ></OverHeadList>
+                <OverHeadList Label='Time' itens={props.times} required={true} valor={time} aoAlterado={valor => setTime(valor)} ></OverHeadList>
                 <Button>Criar Card</Button>
             </form>
         </section>

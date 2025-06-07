@@ -57,7 +57,14 @@ const times = [
       <Banner></Banner>
       <Form times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}></Form>   
       
-      {times.map(time => <Time key={time.nome} Name={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}></Time>)}      
+      {times.map(time => 
+      <Time 
+        key={time.nome} 
+        Name={time.nome} 
+        corPrimaria={time.corPrimaria} 
+        corSecundaria={time.corSecundaria}
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}>
+      </Time>)}      
     </div>
   );
 }
